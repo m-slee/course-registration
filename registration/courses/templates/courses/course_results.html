@@ -1,0 +1,39 @@
+{% extends 'courses/base.html' %}
+
+{% block title %}Course Results{% endblock%}
+{% block body %}
+<div class="column">
+<h1 class="title is-5">Results of query:</h1>
+</div>
+{% if results %}
+  {% for course in results %}
+  <div class="column">
+  <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          {{course}}
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          {{ course.description }}
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="{% url 'course_details' course.id %}" class="card-footer-item">View Details</a>
+        <a href="#" class="card-footer-item">Capacity: {{ course.capicty }}</a>
+        <a href="#" class="card-footer-item">Status: Open </a>
+      </footer>
+    </div>
+  </div>
+  {% endfor %}
+{% else %}
+    <h4>No results found. Please alter you search.</h4>
+{% endif %}
+
+{% endblock %}

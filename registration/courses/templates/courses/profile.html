@@ -1,0 +1,50 @@
+{% extends 'courses/base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock%}
+{% block body %}
+<div class="columns">
+<div class="column is-2">
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img src="{% static 'courses/placeholder.png' %}" alt="logo">
+    </figure>
+  </div>
+  <div class="card-content">
+  <div class="media-content has-text-centered">
+    <p class="title is-4">{{ user.first_name }}</p>
+  </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div>
+    <p class="subtitle has-text-weight-semibold">Welcome {{ user.first_name }}</p>
+    <!--<p>Logged in as: {{ user.username }}</p>
+    <p><a href="{% url 'logout' %}">Logout</a></p>-->
+  </div>
+  
+  <div class="columns">
+    <div class="column">
+    <ul class="is-2"><p class="subtitle is-5 has-text-weight-light">Your current schedule is:</p>
+    {% for course in courses %}
+        <div class="column">
+        <li>
+            <span class="tag is-primary is-light">Course: </span>
+            <a href="{% url 'course_details' course.id %}" class="">{{ course }}</a>
+        </li>
+    </div>
+    {% endfor %}
+    </ul>
+  </div>
+  </div>
+
+  <div class="columns">
+  <div class="column is-one-quarter">
+    <a class="button is-primary is-fullwidth" href="{% url 'index' %}">Search for more Courses</a>
+    </div>
+</div>
+{% endblock %}

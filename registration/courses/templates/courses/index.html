@@ -1,0 +1,89 @@
+{% extends 'courses/base.html' %}
+
+{% block title %}Home{% endblock%}
+{% block body %}
+  <div class="container">
+  <form action="{% url 'course_results' %}" method="get">
+      {% csrf_token %}
+      <div class="field column is-full">
+          <label class="label is-5 has-text-weight-normal">Search by Keyword</label>
+          <label class="label is-5 has-text-weight-light">Find courses containing certain words or phrases</label>
+          <div class="control">
+            <input class="input is-info" name="keyword" type="text" placeholder="Search by Keyword">
+          </div>
+        </div>
+
+        <div class="field column is-half">
+          <label class="label is-5 has-text-weight-normal">Search By Prefix</label>
+          
+              
+          <div class="select is-multiple is-fullwidth">
+              <select name="prefix" multiple size="
+                {% if prefixes.count < 5 %}
+                    {{ prefixes.count }}
+                {% else %}
+                    5
+                {% endif %}
+                ">
+                {% for prefix in prefixes %}
+                <option value="{{prefix.course_prefix}}">{{prefix.course_prefix}}</option>
+                {% endfor%}
+              </select>
+            </div>
+          </div>
+            
+            
+          <div class="field column is-half">
+              <label class="label is-5 has-text-weight-normal">Search By Subject</label>
+            <div class="select is-multiple is-fullwidth">
+                <select name="subject" multiple size="{{ subjects.count }}">
+                  
+                  {% for subject in subjects %}
+                  <option value="{{subject.subject}}">{{subject.subject}}</option>
+                  {% endfor%}
+                </select>
+            </div>
+            </div>
+
+            <div class="field column is-half">
+                <label class="label is-5 has-text-weight-normal">Search By Teacher</label>
+            <div class="select is-multiple is-fullwidth">
+                <select name="teacher" multiple size="{{ teachers.count }}">
+                  
+                  {% for teacher in teachers %}
+                  <option value="{{teacher.teacher}}">{{teacher.teacher}}</option>
+                  {% endfor%}
+                </select>
+            </div>
+          </div>
+
+          <div class="field column is-one-quarter">
+            <label class="label is-5 has-text-weight-normal">Search By Availability</label>
+            <div class="control">
+              <div>
+              <label class="radio">
+                <input value="True" type="radio" name="available">
+                Open
+              </label>
+            </div>
+            <div>
+              <label class="radio">
+                <input value="False" type="radio" name="available">
+                Closed
+              </label>
+            </div>
+            <div>
+              <label class="radio">
+                <input value="both" checked type="radio" name="available">
+                All
+              </label>
+            </div>
+            </div>
+            <div class="column"></div>
+            <div class="control">
+                <button type="submit" class="button is-primary is-fullwidth">Submit</button>
+            </div>
+          </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'courses/base.html' %}
+
+{% block title %}Course id{% endblock%}
+{% block body %}
+
+<div class="column is-one-third">
+{% if message %}
+    {% if success %}
+    <span class="tag is-success is-light">Success</span>
+    <div class="notification is-success">
+            <span class="icon has-text-info">
+                    <i class="fas fa-check-square"></i>
+            </span>&nbsp; {{ message }}
+        </div>
+    {% else %}
+    <span class="tag is-danger is-light">Error</span>
+        <div class="notification is-danger">
+            <span class="icon has-text-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+            </span>&nbsp; {{ message }}
+        </div>
+    {% endif %}
+{% endif %}
+</div>
+  
+<div class="column is-one-third">
+<h5 class="">
+    <a href="{% url 'index' %}" class="button is-primary">Search For More Courses</a>
+</h5>
+</div>
+{% endblock %}

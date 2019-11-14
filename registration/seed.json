@@ -1,0 +1,36 @@
+[
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "course_id": "51",
+    "course_name": "Abstraction and Design in Computation",
+    "course_prefix": "CS",
+    "subject": "Computer Science",
+    "course_open": true,
+    "capicty": 30,
+    "description": "Topics include functional and object-oriented styles of programming",
+    "teacher": "Stuart Shieber",
+    "enrollee": [
+      8
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "course_id": "24",
+    "course_name": "Linear Algebra",
+    "course_prefix": "MAT",
+    "subject": "Mathematics",
+    "course_open": false,
+    "capicty": 20,
+    "description": "Probability, statistics and linear algebra with applications",
+    "teacher": "Stephan Paul",
+    "enrollee": [
+      1
+    ]
+  }
+}
+]

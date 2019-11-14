@@ -1,0 +1,37 @@
+{% extends 'courses/base.html' %}
+
+{% block title %}Course id{% endblock%}
+{% block body %}
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
+<h1 class="has-text-weight-bold">Details page for: {{course}}</h1>
+<p>{{course.description}}</p>
+
+<div class="column">
+<p><span class="has-text-weight-semibold">Teacher: </span>{{ course.teacher }}</p>
+<p><span class="has-text-weight-semibold">Open: </span>{{ course.course_open }}</p>
+<p><span class="has-text-weight-semibold">Capacity: </span>{{ course.capicty }}</p>
+</div>
+
+<div class="column">
+<a href="{% url 'enroll' course.id %}" class="button is-primary">Register</a>
+<a href="{% url 'unenroll' course.id %}" class="button is-danger">Unenroll</a>
+</div>
+
+<div class="column is-full">
+<a class="button is-link" href="{{request.META.HTTP_REFERER}}">Back to Results</a>
+</div>
+
+{% for enrollee in course.enrollee.all %}
+<div class="dropdown-item">
+    <p>
+        {{ enrollee.first_name }}
+    </p>
+</div>
+{% endfor %}
+                
+{% endblock %}
+
