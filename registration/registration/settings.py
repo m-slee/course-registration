@@ -32,7 +32,7 @@ SECRET_KEY = '#7)b06g$fp+4u=v-=a9m_0s0l*oott%*n!5w+#v4^_k@8#ei3t'
 DEBUG = os.getenv("DEBUG_VALUE") == 'True'
 
 # add Heroku url once created
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', 'https://fierce-wave-09727.herokuapp.com/']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', 'fierce-wave-09727.herokuapp.com']
 
 
 # Application definition
