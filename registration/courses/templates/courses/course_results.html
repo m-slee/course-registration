@@ -27,7 +27,7 @@
       <footer class="card-footer">
         <a href="{% url 'course_details' course.id %}" class="card-footer-item">View Details</a>
         <a href="#" class="card-footer-item">Capacity: {{ course.capicty }}</a>
-        <a href="#" class="card-footer-item">Status: Open </a>
+        <a href="#" class="card-footer-item">Status: {% if course.course_open %} Open {% else%} Closed {% endif %}</a>
       </footer>
     </div>
   </div>

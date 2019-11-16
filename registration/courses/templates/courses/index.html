@@ -36,7 +36,13 @@
           <div class="field column is-half">
               <label class="label is-5 has-text-weight-normal">Search By Subject</label>
             <div class="select is-multiple is-fullwidth">
-                <select name="subject" multiple size="{{ subjects.count }}">
+                <select name="subject" multiple size="
+                {% if subjects.count < 5 %}
+                    {{ subjects.count }}
+                {% else %}
+                    5
+                {% endif %}
+                ">
                   
                   {% for subject in subjects %}
                   <option value="{{subject.subject}}">{{subject.subject}}</option>
@@ -48,8 +54,13 @@
             <div class="field column is-half">
                 <label class="label is-5 has-text-weight-normal">Search By Teacher</label>
             <div class="select is-multiple is-fullwidth">
-                <select name="teacher" multiple size="{{ teachers.count }}">
-                  
+                <select name="teacher" multiple size="
+                {% if teachers.count < 5 %}
+                    {{ teachers.count }}
+                {% else %}
+                    5
+                {% endif %}
+                ">
                   {% for teacher in teachers %}
                   <option value="{{teacher.teacher}}">{{teacher.teacher}}</option>
                   {% endfor%}

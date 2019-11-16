@@ -1,5 +1,22 @@
 [
 {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "course_id": "50",
+        "course_name": "Introduction to Computer Science",
+        "course_prefix": "CS",
+        "subject": "Computer Science",
+        "course_open": true,
+        "capicty": 80,
+        "description": "An introduction to the intellectual enterprises of computer science and the art of programming",
+        "teacher": "David Malan",
+        "enrollee": [
+        
+        ]
+    }
+},
+{
   "model": "courses.course",
   "pk": 2,
   "fields": {
@@ -12,7 +29,7 @@
     "description": "Topics include functional and object-oriented styles of programming",
     "teacher": "Stuart Shieber",
     "enrollee": [
-      8
+      
     ]
   }
 },
@@ -29,8 +46,382 @@
     "description": "Probability, statistics and linear algebra with applications",
     "teacher": "Stephan Paul",
     "enrollee": [
-      1
+      
     ]
   }
-}
+},
+{
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "course_id": "20",
+      "course_name": "Calculus I",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 40,
+      "description": "Study topics within calculus such as derivatives, differentiation, and integrals.",
+      "teacher": "Eric Towne",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "course_id": "107",
+      "course_name": "Graph Theory and Combinatorics",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 10,
+      "description": "Topics in combinatorial mathematics that find frequent application in computer science, engineering, and general applied mathematics.",
+      "teacher": "Leslie Valiant",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "course_id": "108",
+      "course_name": "Nonlinear Dynamical Systems",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 15,
+      "description": "An introduction to nonlinear dynamical phenomena, focused on identifying the long term behavior of systems described by ordinary differential equations",
+      "teacher": "Sarah Iams",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "course_id": "105",
+      "course_name": "Ordinary and Partial Differential Equations",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 30,
+      "description": "Ordinary differential equations: power series solutions; special functions; eigenfunction expansions",
+      "teacher": "Margo Levine",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "course_id": "52",
+      "course_name": "Introduction to Applied Mathematics",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 40,
+      "description": "This course provides an introduction to the problems and issues of applied mathematics",
+      "teacher": "Eric Towne",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "course_id": "205",
+      "course_name": "Disordered Systems and Stochastic Processes",
+      "course_prefix": "MAT",
+      "subject": "Mathematics",
+      "course_open": true,
+      "capicty": 20,
+      "description": "The course will familiarize the students with various applications of probability theory, stochastic modeling and random processes",
+      "teacher": "Ariel Amir",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 10,
+    "fields": {
+      "course_id": "181",
+      "course_name": "Machine Learning",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": true,
+      "capicty": 40,
+      "description": "Introduction to machine learning, providing a probabilistic view on artificial intelligence and reasoning under uncertainty",
+      "teacher": "Finale Doshi-Velez",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 11,
+    "fields": {
+      "course_id": "157",
+      "course_name": "Game Theory with Applications",
+      "course_prefix": "ECO",
+      "subject": "Economics",
+      "course_open": false,
+      "capicty": 50,
+      "description": "Applications of game theory to social behavior typically considered the realm of psychologists and philosophers",
+      "teacher": "Erez Yoeli",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 12,
+    "fields": {
+      "course_id": "125",
+      "course_name": "Mechanical Systems",
+      "course_prefix": "ENG",
+      "subject": "Engineering",
+      "course_open": true,
+      "capicty": 40,
+      "description": "Modeling and analysis of mechanical systems. Topics include 3D rigid body dynamics",
+      "teacher": "Boris Kozinsky",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 13,
+    "fields": {
+      "course_id": "150",
+      "course_name": "Probability with Engineering Applications",
+      "course_prefix": "ENG",
+      "subject": "Engineering",
+      "course_open": true,
+      "capicty": 40,
+      "description": "This course introduces the fundamentals of probability theory for parameter estimation and decision making",
+      "teacher": "Yue Lu",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 14,
+    "fields": {
+      "course_id": "157",
+      "course_name": "Signals and Communications",
+      "course_prefix": "ENG",
+      "subject": "Engineering",
+      "course_open": true,
+      "capicty": 20,
+      "description": "Analysis and manipulation of signals in the time and frequency domains in the context of authentic applications",
+      "teacher": "Flavio du Pin Calmon",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 15,
+    "fields": {
+      "course_id": "283",
+      "course_name": "Computer Vision",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": true,
+      "capicty": 50,
+      "description": "Image formation, two-dimensional signal processing; feature analysis; image segmentation; color, texture, and shading",
+      "teacher": "Todd Zickler",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 16,
+    "fields": {
+      "course_id": "320",
+      "course_name": "Data Systems Design",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": true,
+      "capicty": 60,
+      "description": "A comprehensive introduction to modern data systems.",
+      "teacher": "Stratos Idreos",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 17,
+    "fields": {
+      "course_id": "75",
+      "course_name": "Computer Architecture",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": false,
+      "capicty": 40,
+      "description": "Fundamental concepts in the design of computer architecture and organization.",
+      "teacher": "Jason Carroll",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 18,
+    "fields": {
+      "course_id": "382",
+      "course_name": "Natural Language Understanding",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": true,
+      "capicty": 40,
+      "description": "Machine learning methods for processing and generating human language",
+      "teacher": "Alex Rush",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 19,
+    "fields": {
+      "course_id": "120",
+      "course_name": "Stellar Physics",
+      "course_prefix": "PHY",
+      "subject": "Physics",
+      "course_open": true,
+      "capicty": 25,
+      "description": "Topics include stellar structure; energy transport in stars; stellar atmospheres",
+      "teacher": "Selma de Mink",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 20,
+    "fields": {
+      "course_id": "214",
+      "course_name": "Observational Astronomy",
+      "course_prefix": "AST",
+      "subject": "Astronomy",
+      "course_open": false,
+      "capicty": 20,
+      "description": "Observational techniques associated with relativistic and high-energy astrophysical phenomena",
+      "teacher": "Jonathan Grindlay",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 21,
+    "fields": {
+      "course_id": "15",
+      "course_name": "Stellar and Planetary Astronomy",
+      "course_prefix": "AST",
+      "subject": "Astronomy",
+      "course_open": true,
+      "capicty": 45,
+      "description": "This course provides an introduction to the physical principles describing the formation and evolution of stars and their planetary companions",
+      "teacher": "Karin Oberg",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 22,
+    "fields": {
+      "course_id": "19",
+      "course_name": "Introduction to Theoretical Physics",
+      "course_prefix": "PHY",
+      "subject": "Physics",
+      "course_open": false,
+      "capicty": 20,
+      "description": "A comprehensive introduction to the foundations of theoretical physics, with a first-principles approach to its five main areas",
+      "teacher": "Jacob Barandes",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 23,
+    "fields": {
+      "course_id": "144",
+      "course_name": "Logic and Philosophy",
+      "course_prefix": "PHI",
+      "subject": "Philosophy",
+      "course_open": true,
+      "capicty": 40,
+      "description": "Three philosophically important results of modern logic: Gödel’s incompleteness theorems; Turing’s definition of mechanical computability; Tarski’s theory of truth for formalized languages.",
+      "teacher": "Warren Goldfarb",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 24,
+    "fields": {
+      "course_id": "111",
+      "course_name": "Introduction to Scientific Computing",
+      "course_prefix": "CS",
+      "subject": "Computer Science",
+      "course_open": true,
+      "capicty": 50,
+      "description": "Introduce methods that are useful in applications and research and to give the students hands-on experience with these methods",
+      "teacher": "Cengiz Pehlevan",
+      "enrollee": [
+        
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 25,
+    "fields": {
+      "course_id": "130",
+      "course_name": "Neuroscience",
+      "course_prefix": "NSC",
+      "subject": "Neuroscience",
+      "course_open": true,
+      "capicty": 70,
+      "description": "Basic principles of organization and function of the nervous system.",
+      "teacher": "John Assad",
+      "enrollee": [
+        
+      ]
+    }
+  }
 ]
