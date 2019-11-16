@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 import warnings
-
+import dj_database_url
 # added to ignore WhiteNoise error
-warnings.filterwarnings("ignore", message="No directory at", module="whitenoise.base" )
+#warnings.filterwarnings("ignore", message="No directory at", module="whitenoise.base" )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -96,6 +96,9 @@ DATABASES = {
     }
 }
 
+# for dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
