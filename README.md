@@ -1,7 +1,7 @@
 ### Django Course Registration  
 ![Alt text](registration/static/courses/logo.png?raw=true)
 
-### A Djagno/PostgreSQL app that allows users to search for courses by subject/keyword/teacher availablility, enroll/unenroll, and view course schedule on their profile page. To run locally, you will need PostgreSQL installed, and to store these variable in a .env file.  
+A Djagno/PostgreSQL app that allows users to search for courses by subject/keyword/teacher availablility, enroll/unenroll, and view course schedule on their profile page. To run locally, you will need PostgreSQL installed, and to store these variable in a .env file.  
 
 ```
 export DB_NAME= # your db name
